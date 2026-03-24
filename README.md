@@ -115,9 +115,3 @@ consultation-booking-system/
 ![Блок-схема](block%20diagram.png)
 
 ---
-
-## 👨‍💻 Автор
-
-**Goydaa**
-
-GitHub: https://github.com/Goydaa
