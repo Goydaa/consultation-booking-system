@@ -112,7 +112,7 @@ consultation-booking-system/
 
 ## 📊 Блок-схема
 
-![Блок-схема](diagram.png)
+![Блок-схема](block%20diagram.png)
 
 ---
 
