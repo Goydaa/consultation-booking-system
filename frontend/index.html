@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Запись на консультации</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1> Запись на консультации</h1>
+            <div class="user-info">
+                <span id="userName">Гость</span>
+                <button id="loginBtn" class="btn btn-small">Войти</button>
+            </div>
+        </header>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>Всего консультаций</h3>
+                <div class="stat-number" id="totalSlots">0</div>
+            </div>
+            <div class="stat-card">
+                <h3>Доступно</h3>
+                <div class="stat-number" id="availableSlots">0</div>
+            </div>
+            <div class="stat-card">
+                <h3>Записей</h3>
+                <div class="stat-number" id="totalBookings">0</div>
+            </div>
+        </div>
+
+        <div id="teacherPanel" style="display: none; margin-bottom: 20px;">
+            <button id="createSlotBtn" class="btn btn-primary">+ Создать новую консультацию</button>
+        </div>
+
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="slots"> Доступные слоты</button>
+            <button class="tab-btn" data-tab="my"> Мои записи</button>
+        </div>
+
+        <div id="slotsTab" class="tab-content active">
+            <h2>Доступные консультации</h2>
+            <div class="slots-list" id="slotsList">
+                <div class="loading">Загрузка...</div>
+            </div>
+        </div>
+
+        <div id="myTab" class="tab-content">
+            <h2>Мои записи</h2>
+            <div class="appointments-list" id="appointmentsList">
+                <div class="loading">Загрузка...</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Вход</h2>
+            <input type="text" id="loginUsername" placeholder="Имя пользователя" value="student1">
+            <button id="submitLogin" class="btn btn-primary">Войти</button>
+            <p class="hint">Тестовые: teacher, student1, student2</p>
+        </div>
+    </div>
+
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Запись на консультацию</h2>
+            <p id="slotInfo"></p>
+            <input type="text" id="bookingTopic" placeholder="Тема консультации">
+            <button id="submitBooking" class="btn btn-primary">Записаться</button>
+        </div>
+    </div>
+
+    <div id="createSlotModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Создать консультацию</h2>
+            <input type="datetime-local" id="slotStart" placeholder="Начало">
+            <input type="datetime-local" id="slotEnd" placeholder="Конец">
+            <input type="number" id="slotMaxStudents" placeholder="Максимум студентов" value="2">
+            <button id="submitCreateSlot" class="btn btn-primary">Создать</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
